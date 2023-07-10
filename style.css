@@ -1,0 +1,274 @@
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark_slate_grey: hsl(234, 29%, 20%);
+  --charcoal_gray: hsl(235, 18%, 26%);
+  --gray: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--charcoal_gray);
+}
+
+#sing_up_form {
+  width: 80.5rem;
+  height: 60rem;
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sing_up_form #form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#sing_up_form #form h1 {
+  color: var(--dark_slate_grey);
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+#sing_up_form #form>p {
+  font-size: 1.6rem;
+  color: var(--charcoal_gray);
+  width: 36rem;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+#sing_up_form #form ul {
+  width: 36rem;
+  margin-bottom: 3rem;
+}
+
+#sing_up_form #form ul li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#sing_up_form #form ul li p {
+  font-size: 1.6rem;
+  color: var(--charcoal_gray);
+  font-weight: 400;
+}
+
+#sing_up_form #form #label_error {
+  width: 36rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#sing_up_form #form #label_error label {
+  color: var(--dark_slate_grey);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#sing_up_form #form #label_error p {
+  color: var(--tomato);
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: none;
+}
+
+#sing_up_form #form input {
+  width: 36rem;
+  height: 4rem;
+  outline: none;
+  padding-left: 2rem;
+  border: 1.6px solid var(--gray);
+  border-radius: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+#sing_up_form #form .error {
+  background-color: #ff625742;
+  color: var(--tomato);
+  border-color: var(--tomato);
+}
+
+#sing_up_form #form button {
+  width: 36rem;
+  height: 5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: var(--dark_slate_grey);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#sing_up_form #img {
+  width: 50%;
+  height: 100%;
+}
+
+#sing_up_form #img img {
+  width: 100%;
+  height: 100%;
+}
+
+#sing_up_form #img img:nth-child(2) {
+  display: none;
+}
+
+#sucess {
+  display: none;
+  width: 45rem;
+  height: 45rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 3rem;
+}
+
+#sucess h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--dark_slate_grey);
+  margin: 2rem 0;
+}
+
+#sucess p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: var(--charcoal_gray);
+}
+
+#sucess #valid_email {
+  color: var(--dark_slate_grey);
+  font-weight: 700;
+}
+
+#sucess button {
+  margin-top: 3rem;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  outline: none;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--dark_slate_grey);
+  color: var(--white);
+  cursor: pointer;
+}
+
+#sucess button:hover {
+  background: linear-gradient(30deg, hsl(338, 78%, 64%), hsl(4, 98%, 61%) 99%);
+  box-shadow: 0 8px 30px -6px var(--tomato)
+}
+
+@media(max-width:1025px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    display: block;
+  }
+
+  #sing_up_form {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  #sing_up_form #form {
+    width: 100vw;
+  }
+
+  #sing_up_form #img {
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #sing_up_form #img img:nth-child(1) {
+    display: none;
+  }
+
+  #sing_up_form #img img:nth-child(2) {
+    display: block;
+  }
+
+  #sing_up_form #img img {
+    width: 100%;
+    height: auto;
+  }
+
+  #sucess {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 2rem;
+  }
+
+  #sucess div:nth-child(1) {
+    position: absolute;
+    top: 20vh;
+  }
+
+  #sucess h1 {
+    margin: 4rem 0 2rem 0;
+  }
+
+  #sucess div:nth-child(2) {
+    position: absolute;
+    bottom: 5rem;
+    left: 2rem;
+    right: 2rem;
+  }
+}
+
+@media(max-width:481px) {
+  html {
+    font-size: 43.75%;
+  }
+
+}
